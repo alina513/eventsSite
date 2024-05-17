@@ -1,3 +1,9 @@
+import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
+
+const HomePage = lazy(() => import('../pages/HomePage'));
+const EventDetailsPage = lazy(() => import('../pages/EventDetailPsage'));
+
 export const App = () => {
   return (
     <div
@@ -10,7 +16,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Routes>
+      <Route path="/" element={<HomePage />}/>
+      <Route path="/:eventId" element={<EventDetailsPage />}/>
+      </Routes>
     </div>
   );
 };
