@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/610.e7c5d47c.chunk.js","mappings":"iMACe,SAASA,IACpB,OACIC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAIR,C","sources":["pages/EventDetailPsage.jsx"],"sourcesContent":["\nexport default function EventDetailPage () {\n    return(\n        <>\n        \n        </>\n    )\n}"],"names":["EventDetailPage","_jsx","_Fragment"],"sourceRoot":""}
