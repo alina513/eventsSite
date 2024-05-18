@@ -6,8 +6,8 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <BrowserRouter basename="/eventsSite">
-    <App />
+    <BrowserRouter basename="/eventsSite">
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

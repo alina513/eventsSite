@@ -1,17 +1,15 @@
-import  Event  from "../Event/Event";
-import { ListEvent } from "./List.styled";
+import Event from '../Event/Event';
+import { ListEvent } from './List.styled';
 const List = ({ events }) => {
-    return (
-      < >
-      <ListEvent >
+  return (
+    <>
+      <ListEvent>
         {events.map(event => {
-          return (
-            <Event key={event._id} event = {event}/>
-          );
+          return <Event key={event._id} event={event} />;
         })}
       </ListEvent>
-      </>
-    );
-  };
-  
-  export default List;
+    </>
+  );
+};
+
+export default List;

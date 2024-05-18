@@ -1,12 +1,13 @@
 import Modal from 'react-modal';
-import  Form  from '../Form/Form';
+import FormReg from '../Form/Form';
 import { Wrapper } from './Modal.styled';
 
 Modal.setAppElement('#modal');
 
-export const ModalRegister = ({
-  isOpenModal,
-  setIsOpenModal,
+export const ModalRegisration = ({
+  event_id,
+  isOpenModalRegistration,
+  setIsOpenModalRegistration,
 }) => {
   const customStyles = {
     overlay: {
@@ -28,20 +29,18 @@ export const ModalRegister = ({
 
   return (
     <>
-      <ModalRegister
-        isOpen={isOpenModal}
+      <Modal
+        isOpen={isOpenModalRegistration}
         onRequestClose={() => {
-          setIsOpenModal(false);
+          setIsOpenModalRegistration(false);
         }}
         style={customStyles}
         contentLabel="More info modal"
       >
         <Wrapper>
-          
-
-          <Form />
+          <FormReg event_id={event_id} />
         </Wrapper>
-      </ModalRegister>
+      </Modal>
     </>
   );
 };

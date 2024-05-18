@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const EventDetailsPage = lazy(() => import('../pages/EventDetailPsage'));
@@ -13,13 +13,15 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      <Routes>
-      <Route path="/" element={<HomePage />}/>
-      <Route path="/:eventId" element={<EventDetailsPage />}/>
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:eventId" element={<EventDetailsPage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };
